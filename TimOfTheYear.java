@@ -17,7 +17,7 @@ public class TimOfTheYear {
         //  01-JAN-1970 Thursday
 
 
-        System.out.println(c.get(Calendar.YEAR));
+
         // System.out.println(c.get(Calendar.DATE));
         //    System.out.println(c.get(Calendar.DAY_OF_WEEK));
         String[] dat = new String[4];
@@ -26,6 +26,7 @@ public class TimOfTheYear {
         else dat[0] = "0" + String.valueOf(day);
         System.out.println(dat[0]);
         int dayofwk = c.get(Calendar.DAY_OF_WEEK);
+        dat[3]= String.valueOf(c.get(Calendar.YEAR));
 
         switch (dayofwk) {
             case 2:
@@ -91,5 +92,6 @@ public class TimOfTheYear {
                 break;
         }
         System.out.println(dat[2]);
+        System.out.println(dat[0]+"-"+dat[2]+"-"+dat[3]);
     }
 }
